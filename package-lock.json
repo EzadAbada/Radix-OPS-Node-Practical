@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "4767cf02-6260-4db0-a207-032e9252ff54",
+		"name": "node_practical_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8787/api/customers/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImlhdCI6MTcxNDgyMDU1NywiZXhwIjoxNzE0OTA2OTU3fQ.dvZP7m54kruFa4g5ulEq75cMrSE-dnDW4r-U7V3TVnM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8787/api/customers/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"customers",
+						"2"
+					]
+				},
+				"description": "get single customer"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8787/api/customers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzE0ODEzMDQ5LCJleHAiOjE3MTQ4OTk0NDl9.j9xiiANngFIHZWBRvk-Nvh9CbXj-IXbzXU69Ola2n3s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ezad ABada javed ewfwe\",\n    \"email\": \"ezad.abada@gmail123.com\",\n    \"password\": \"Test\",\n    \"gender\": \"Male\",\n    \"address\": \"Bla bla blaefef\",\n    \"profile_image\": \"\",\n    \"createdAt\": null,\n    \"updatedAt\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8787/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"customers"
+					]
+				},
+				"description": "Create customer"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8787/api/customers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzE0ODEzMDQ5LCJleHAiOjE3MTQ4OTk0NDl9.j9xiiANngFIHZWBRvk-Nvh9CbXj-IXbzXU69Ola2n3s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8787/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"customers"
+					]
+				},
+				"description": "get all customers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8787/api/customers/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImlhdCI6MTcxNDgyMDU1NywiZXhwIjoxNzE0OTA2OTU3fQ.dvZP7m54kruFa4g5ulEq75cMrSE-dnDW4r-U7V3TVnM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8787/api/customers/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"customers",
+						"12"
+					]
+				},
+				"description": "Update customer "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8787/api/customers/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzE0ODEzMDQ5LCJleHAiOjE3MTQ4OTk0NDl9.j9xiiANngFIHZWBRvk-Nvh9CbXj-IXbzXU69Ola2n3s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@gmail.com123",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "test name",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "femal",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/ezad.abada/Desktop/Latest-04-22/Pictures/pb3.png"
+						},
+						{
+							"key": "address",
+							"value": "bla bla bla",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "85852859858",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8787/api/customers/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"customers",
+						"12"
+					]
+				},
+				"description": "upodate customer"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8787/api/customers/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImlhdCI6MTcxNDgyMDU1NywiZXhwIjoxNzE0OTA2OTU3fQ.dvZP7m54kruFa4g5ulEq75cMrSE-dnDW4r-U7V3TVnM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8787/api/customers/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"customers",
+						"3"
+					]
+				},
+				"description": "delete customer"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8787/api/auth/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ezad Abada I\",\n    \"email\": \"javed@gmail.comkk\",\n    \"password\": \"Test@1234\",\n    \"phone_number\": \"24892498\",\n    \"gender\": \"Male\",\n    \"address\": \"Bla bla blaefef\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8787/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				},
+				"description": "signup "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8787/api/customers/image/4",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzE0ODEzMDQ5LCJleHAiOjE3MTQ4OTk0NDl9.j9xiiANngFIHZWBRvk-Nvh9CbXj-IXbzXU69Ola2n3s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8787/api/customers/image/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"customers",
+						"image",
+						"12"
+					]
+				},
+				"description": "get image url"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8787/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"javed@gmail.comkk\",\n    \"password\": \"Test@1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8787/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8787",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": "login api"
+			},
+			"response": []
+		}
+	]
+}
