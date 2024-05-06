@@ -8,6 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 const db = require("./models");
 db.sequelize.sync();
+
 require('./routes/customer.routes')(app);
 require('./routes/auth.routes')(app);
 
