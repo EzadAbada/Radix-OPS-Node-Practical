@@ -5,6 +5,7 @@ checkDuplicateUsernameOrEmail = async (req, res, next) => {
     console.log('I am in checkDuplicateUsernameOrEmail');
   try {
     // Email
+    // console.log(req.body.email);
     customer = await Customers.findOne({
       where: {
         email: req.body.email
@@ -16,9 +17,9 @@ checkDuplicateUsernameOrEmail = async (req, res, next) => {
         message: "Failed! Email is already in use!"
       });
     }
-
     next();
   } catch (error) {
+    console.log(error);
     return res.status(500).send({
       message: "Unable to validate email!"
     });

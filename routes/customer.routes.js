@@ -14,6 +14,7 @@
 const { authJwt } = require("../middleware");
 const customers = require("../controllers/customers.js");
 
+
 module.exports = function(app) {
   app.use(function(req, res, next) {
     res.header(

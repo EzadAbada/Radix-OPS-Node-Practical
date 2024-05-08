@@ -1,5 +1,5 @@
 const { verifySignUp } = require("../middleware");
-const { validator } = require("../middleware/express_validator");
+const expressValidator  = require("../middleware/express_validator");
 const controller = require("../controllers/auth.controller");
 
 module.exports = function(app) {
@@ -14,12 +14,11 @@ module.exports = function(app) {
   app.post(
     "/api/auth/register",
     [
+        expressValidator.registrationValidation,
       verifySignUp.checkDuplicateUsernameOrEmail
     ],
     controller.register
   );
-
-  app.post("/api/auth/login", controller.login);
-
-  app.post("/api/auth/signout", controller.signout);
+  app.post("/api/auth/login",expressValidator.loginValidation, controller.login);
+//   app.post("/api/auth/login", controller.login);
 };
